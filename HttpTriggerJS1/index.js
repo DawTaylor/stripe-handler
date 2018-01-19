@@ -42,10 +42,10 @@ module.exports = function (context, req) {
     }
     else {
         context.log(req.body)
-        context.res = {
+        context.res({
             status: 400,
             body: "We're missing something"
-        };
+        })
         context.done()
     }
 }
