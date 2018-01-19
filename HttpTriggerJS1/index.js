@@ -29,7 +29,7 @@ module.exports = function (context, req) {
                 context.res = {
                     body: 'Succesfully charged'
                 }
-                context.done
+                context.done()
             })
             .catch(err =>{
                 context.log(err)
