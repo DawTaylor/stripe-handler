@@ -26,26 +26,26 @@ module.exports = function (context, req) {
             })
             .then(charge => {
                 context.log('Charge created')
-                context.res({
+                context.res = {
                     body: 'Succesfully charged'
-                })
+                }
                 context.done
             })
             .catch(err =>{
                 context.log(err)
-                context.res({
+                context.res = {
                     status: 400,
                     body: 'Something went wrong' + JSON.stringify(err)
-                })
+                }
                 context.done()
             })
     }
     else {
         context.log(req.body)
-        context.res({
+        context.res = {
             status: 400,
             body: "We're missing something"
-        })
+        }
         context.done()
     }
 }
