@@ -1,4 +1,4 @@
-var stripe = require('stripe')('pk_test_6iirxVO2UpYRzWkNVDl6BBOj')
+var stripe = require('stripe')('sk_test_xNrbGHbVNiODMiyfSsB9Rfaa')
 
 module.exports = function (context, req) {
     context.log('Starting request');
